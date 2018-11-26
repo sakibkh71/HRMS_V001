@@ -1,0 +1,61 @@
+.orgchart{
+  background-image: linear-gradient(90deg, rgba(89, 233, 68, 0.2) 10%, rgba(0, 0, 0, 0) 10%), linear-gradient(rgba(37, 221, 66, 0.2) 10%, rgba(0, 0, 0, 0) 10%);
+}
+
+.orgchart .node .title{
+  background-color: rgba(57, 212, 26, 0.8)!important;
+}
+
+.orgchart tr.lines td.rightLine{
+  border-right: 1px solid rgba(56, 194, 35, 0.8)!important;
+}
+
+.orgchart tr.lines td.topLine {
+  border-top: 2px solid rgba(79, 198, 35, 0.8)!important;
+}
+
+.orgchart tr.lines td.leftLine {
+  border-left: 1px solid rgba(66, 200, 52, 0.8)!important;
+}
+
+.orgchart tr.lines .downLine {
+  background-color: rgba(55, 183, 23, 0.8)!important;
+}
+
+.orgchart .node .content {
+  border: 1px solid rgba(51, 182, 48, 0.8)!important;
+}
+
+.orgchart .second-menu-icon {
+    transition: opacity .5s;
+    opacity: 0;
+    right: -5px;
+    top: -5px;
+    z-index: 2;
+    color: rgba(68, 157, 68, 0.5);
+    font-size: 18px;
+    position: absolute;
+}
+.orgchart .second-menu-icon:hover {
+  color: #449d44;
+}
+.orgchart .node:hover .second-menu-icon {
+  opacity: 1;
+}
+.orgchart .node .second-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: -70px;
+  border-radius: 35px;
+  box-shadow: 0 0 10px 1px #999;
+  background-color: #fff;
+  z-index: 1;
+}
+.orgchart .node .second-menu .avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+    float: left;
+  margin: 5px;
+}

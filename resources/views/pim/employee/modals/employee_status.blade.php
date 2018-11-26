@@ -1,0 +1,98 @@
+<div class="modal fade bs-example-modal-lg EmployeeStatus" role="dialog" aria-labelledby="myLargeModalLabel" id="modalDataAdd">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Change Employee Status</h4>
+            </div>
+            
+            <form class="form-horizontal" @submit.prevent="empUpdateStatus" id="addFormData" method="post" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="form-group" style="padding-top: 0px;">
+                        <div class="row">
+                            <div class="col-md-12 control-label">
+                                <div align="center"><h5 style="padding-top: 0px;margin-top: 0px;">
+                                    Current/Last Type <br>
+                                    <span class="btn-success btn-xs">Name# @{{ returnTypeName(final_or_current_type_id) }}</span>
+                                    <span class="btn-info btn-xs">From Date# @{{ final_or_current_type_from_date }}</span>
+                                    <span class="btn-success btn-xs" v-if="final_or_current_type_to_date">To Date# @{{ final_or_current_type_to_date }}</span>
+                                    <br/><br/>Status History</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-10 col-md-offset-1">
+                            <table class="table">
+                                <tr class="success">
+                                    <th>Sl</th>
+                                    <th>Status</th>
+                                    <th>From Date</th>
+                                    <th>To Date</th>
+                                    <th>Remarks</th>
+                                    <th></th>
+                                </tr>
+                                <tr v-for="(info, index) in show_history">
+                                    <td v-text="index+1"></td>
+                                    <td v-text="returnStatusName(info.employee_status_id)"></td>
+                                    <td v-text="info.from_date"></td>
+                                    <td v-text="info.to_date"></td>
+                                    <td v-text="info.remarks"></td>
+                                    <!-- <td v-if="info.id == upcomming_status"><div class="btn btn-danger btn-xs" @click="deleteUpComming(info.id, 'EmpStatus')"><i class="fa fa-trash-o" aria-hidden="true"></i></div></td> -->
+                                    
+                                    <!--001 Sheet start-->
+                                    <td><div class="btn btn-danger btn-xs" @click="deleteUpComming(info.id, 'EmpStatus')"><i class="fa fa-trash-o" aria-hidden="true"></i></div></td>
+                                    <!--001 Sheet finished-->
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="create-form-errors" v-html="HTMLcontent">
+                        
+                    </div>
+
+                    {{ csrf_field() }}
+
+                    <input type="hidden" name="user_emp_type_map_id" v-model="final_or_current_type_map_id">
+                    <input type="hidden" name="to_date_limit" v-model="final_or_current_type_to_date">
+
+                    <div class="form-group">
+                        <label for="status_name" class="col-md-3 control-label">Employee Status <span class="text-danger">*</span></label>
+                        <div class="col-md-9">
+                            <select class="form-control input-sm" name="status_name">
+                                <option value="">Select Employee Status</option>
+                                @foreach($allStatus as $st)
+                                    <option value="{{$st->id}}">{{$st->status_name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status_eff_date" class="col-md-3 control-label">Effective Date <span class="text-danger">*</span></label>
+                        <div class="col-md-9">
+                            <input type="text" name="status_eff_date" class="gui-input datepicker form-control input-sm" id="status_eff_date" placeholder="Status Effective Date"></input>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="col-md-3 control-label">Remarks </label>
+                        <div class="col-md-9">
+                            <textarea name="status_remarks" class="form-control input-sm" placeholder="Application reason"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- <div class="form-group">
+                        <label for="passport_no" class="col-md-3 control-label">Files</label>
+                        <div class="col-md-9">
+                            <input type="file" name="file[]" id="file" multiple="multiple"></input>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default modal-close-btn" id="modal-close-btn" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Process</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

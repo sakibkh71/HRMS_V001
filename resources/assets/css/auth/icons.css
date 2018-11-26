@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+/* voyager */
+@font-face {
+  font-family: "voyager";
+  src:url("https://file.myfontastic.com/QLbQY2QVvDNQgGeBRf7fWh/fonts/1476986221.eot");
+  src:url("https://file.myfontastic.com/QLbQY2QVvDNQgGeBRf7fWh/fonts/1476986221.eot?#iefix") format("embedded-opentype"),
+    url("https://file.myfontastic.com/QLbQY2QVvDNQgGeBRf7fWh/fonts/1476986221.woff") format("woff"),
+    url("https://file.myfontastic.com/QLbQY2QVvDNQgGeBRf7fWh/fonts/1476986221.ttf") format("truetype"),
+    url("https://file.myfontastic.com/QLbQY2QVvDNQgGeBRf7fWh/fonts/1476986221.svg#1476986221") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "voyager" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="voyager-"]:before,
+[class*=" voyager-"]:before {
+  font-family: "voyager" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.voyager-boat:before {
+  content: "\62";
+}
+.voyager-helm:before {
+  content: "\63";
+}
+.voyager-group:before {
+  content: "\61";
+}
+.voyager-images:before {
+  content: "\64";
+}
+.voyager-ios-albums:before {
+  content: "\65";
+}
+.voyager-file-text-o:before {
+  content: "\66";
+}
+.voyager-tools:before {
+  content: "\67";
+}
+.voyager-pie-chart:before {
+  content: "\69";
+}
+.voyager-news:before {
+  content: "\6a";
+}
+.voyager-list:before {
+  content: "\6b";
+}
+.voyager-hammer:before {
+  content: "\68";
+}
+.voyager-lock:before {
+  content: "\6c";
+}
+.voyager-power:before {
+  content: "\6d";
+}
+.voyager-person:before {
+  content: "\6e";
+}
+.voyager-sort:before {
+  content: "\6f";
+}
+.voyager-sort-asc:before {
+  content: "\70";
+}
+.voyager-sort-desc:before {
+  content: "\71";
+}
+.voyager-data:before {
+  content: "\72";
+}
+.voyager-wearable:before {
+  content: "\73";
+}
+.voyager-company:before {
+  content: "\74";
+}
+.voyager-paw:before {
+  content: "\75";
+}
+.voyager-settings:before {
+  content: "\76";
+}
+.voyager-dot:before {
+  content: "\77";
+}
+.voyager-bread:before {
+  content: "\78";
+}
+.voyager-window-list:before {
+  content: "\79";
+}
+.voyager-list-add:before {
+  content: "\7a";
+}
+.voyager-trash:before {
+  content: "\41";
+}
+.voyager-handle:before {
+  content: "\42";
+}
+.voyager-folder:before {
+  content: "\43";
+}
+.voyager-video:before {
+  content: "\44";
+}
+.voyager-music:before {
+  content: "\45";
+}
+.voyager-play:before {
+  content: "\46";
+}
+.voyager-activity:before {
+  content: "\47";
+}
+.voyager-anchor:before {
+  content: "\48";
+}
+.voyager-plus:before {
+  content: "\49";
+}
+.voyager-double-down:before {
+  content: "\4a";
+}
+.voyager-double-up:before {
+  content: "\4b";
+}
+.voyager-x:before {
+  content: "\4c";
+}
+.voyager-person-stalker:before {
+  content: "\4d";
+}
